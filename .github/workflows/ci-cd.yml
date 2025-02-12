@@ -1,5 +1,5 @@
 
-name: hello-world
+name: motivator
 on: push
 jobs:
   sample-job:
