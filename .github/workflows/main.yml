@@ -5,6 +5,10 @@ jobs:
   # Build Job
   build:
     runs-on: ubuntu-latest
+    # default directory
+    defaults:
+      run:
+        working-directory: ./my-react-app
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -27,6 +31,10 @@ jobs:
     needs: build
     # Specify runner + deployment step
     runs-on: ubuntu-latest
+    # default directory
+    defaults:
+      run:
+        working-directory: ./my-react-app
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
