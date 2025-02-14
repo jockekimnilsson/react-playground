@@ -39,6 +39,7 @@ jobs:
           path: ./my-react-app/dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.CI_CD_TOKEN }}
           publish_dir: ./my-react-app/dist
